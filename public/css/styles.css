@@ -1,0 +1,180 @@
+:root{
+  --rootColor: #a683e3;
+  --background: #e4e9fd;
+  --heading: #FFF;
+  --tasksBackground: #FFF;
+  --tasksBoxShadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  --tasksSeparator: #f1f1f1;
+  --taskCutColor: #808080;
+  --taskNormalColor: #00204A;
+  --addButtonColor: #FFF;
+  --addButonNormalBackgroundColor: #a683E3;
+  --addbuttonPressesBackgroundColor: #A277EC;
+  --footerCreditColor: rgba(0, 0, 0, 0.5);
+}
+/*  Hides scrollbar in Chrome but still able to scroll */
+::-webkit-scrollbar {
+  
+    display: none;
+}
+
+html {
+  background-color: var(--background);
+  /* background-image: -webkit-linear-gradient(65deg, var(--rootColor) 50%, #E4E9FD 50%); */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a683e3+1,e4e9fd+75 */
+  background: var(--rootColor); /* Old browsers */
+  background: -moz-linear-gradient(
+    45deg,
+    var(--rootColor) 1%,
+    var(--background) 75%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--rootColor) 1%,
+   var(--background) 75%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    45deg,
+    var(--rootColor) 1%,
+    var(--background) 75%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a683e3', endColorstr='var(--background)',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  /* min-height: 1000px; */
+  font-family: "helvetica neue";
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jura', sans-serif;
+  /*  Hides scrollbar in Firefox but still able to scroll */
+  scrollbar-width: none;
+}
+
+
+
+.container-all {
+  margin: 0;
+  padding: 0;
+  min-height: 83vh;
+}
+
+h1 {
+  color: var(--heading);
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: var(--tasksBackground);
+  border-radius: 5px;
+  box-shadow: var(--tasksBoxShadow);
+}
+
+#heading {
+  font-family: 'Rajdhani', cursive;
+  /* letter-spacing: 2px; */
+  background-color: var(--rootColor);
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--tasksSeparator);
+  
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+.item-name{
+  line-height: 1.5;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.item-input{
+  font-family: 'Jura', sans-serif;
+}
+
+input:checked + p {
+  text-decoration: line-through;
+  text-decoration-color:var(--taskCutColor);
+  color: var(--taskCutColor);
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: var(--taskNormalColor);
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: var(--addButonNormalBackgroundColor);
+  color: var(--addButtonColor);
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 var(--rootColor);
+}
+
+::placeholder {
+  color: var(--taskCutColor);
+  opacity: 1;
+}
+
+footer {
+  color: var(--footerCreditColor);
+  text-align: center;
+  height: 10vh;
+}
+
+.input-add{
+  padding-top: 6px;
+}
+
+.input-add:focus{
+  outline: #000 0px;
+}
+
+.input-add:active{
+  background-color:  var(--addbuttonPressesBackgroundColor);
+}
