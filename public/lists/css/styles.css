@@ -1,30 +1,44 @@
-
+:root{
+  --rootColor: #a683e3;
+  --background: #e4e9fd;
+  --heading: #FFF;
+  --tasksBackground: #FFF;
+  --tasksBoxShadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  --tasksSeparator: #f1f1f1;
+  --taskCutColor: #808080;
+  --taskNormalColor: #00204A;
+  --addButtonColor: #FFF;
+  --addButonNormalBackgroundColor: #a683E3;
+  --addbuttonPressesBackgroundColor: #A277EC;
+  --footerCreditColor: rgba(0, 0, 0, 0.5);
+}
 /*  Hides scrollbar in Chrome but still able to scroll */
 ::-webkit-scrollbar {
+  
     display: none;
 }
 
 html {
-  background-color: #e4e9fd;
-  /* background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%); */
+  background-color: var(--background);
+  /* background-image: -webkit-linear-gradient(65deg, var(--rootColor) 50%, #E4E9FD 50%); */
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a683e3+1,e4e9fd+75 */
-  background: #a683e3; /* Old browsers */
+  background: var(--rootColor); /* Old browsers */
   background: -moz-linear-gradient(
     45deg,
-    #a683e3 1%,
-    #e4e9fd 75%
+    var(--rootColor) 1%,
+    var(--background) 75%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     45deg,
-    #a683e3 1%,
-    #e4e9fd 75%
+    var(--rootColor) 1%,
+   var(--background) 75%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     45deg,
-    #a683e3 1%,
-    #e4e9fd 75%
+    var(--rootColor) 1%,
+    var(--background) 75%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a683e3', endColorstr='#e4e9fd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a683e3', endColorstr='var(--background)',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
   /* min-height: 1000px; */
   font-family: "helvetica neue";
@@ -49,22 +63,22 @@ body {
 }
 
 h1 {
-  color: #fff;
+  color: var(--heading);
   padding: 10px;
 }
 
 .box {
   max-width: 400px;
   margin: 50px auto;
-  background: white;
+  background: var(--tasksBackground);
   border-radius: 5px;
-  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--tasksBoxShadow);
 }
 
 #heading {
   font-family: 'Rajdhani', cursive;
   /* letter-spacing: 2px; */
-  background-color: #a683e3;
+  background-color: var(--rootColor);
   text-align: center;
 }
 
@@ -72,7 +86,7 @@ h1 {
   min-height: 70px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid var(--tasksSeparator);
   
 }
 
@@ -93,8 +107,8 @@ h1 {
 
 input:checked + p {
   text-decoration: line-through;
-  text-decoration-color: grey;
-  color: grey;
+  text-decoration-color:var(--taskCutColor);
+  color: var(--taskCutColor);
 }
 
 input[type="checkbox"] {
@@ -106,7 +120,7 @@ p {
   padding: 20px;
   font-size: 20px;
   font-weight: 200;
-  color: #00204a;
+  color: var(--taskNormalColor);
 }
 
 form.item {
@@ -119,8 +133,8 @@ button {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #a683e3;
-  color: #fff;
+  background-color: var(--addButonNormalBackgroundColor);
+  color: var(--addButtonColor);
   font-size: 30px;
   padding-bottom: 6px;
   border-width: 0;
@@ -139,21 +153,28 @@ input[type="text"] {
 
 input[type="text"]:focus {
   outline: none;
-  box-shadow: inset 0 -3px 0 0 #a683e3;
+  box-shadow: inset 0 -3px 0 0 var(--rootColor);
 }
 
 ::placeholder {
-  color: grey;
+  color: var(--taskCutColor);
   opacity: 1;
 }
 
 footer {
-  color: white;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--footerCreditColor);
   text-align: center;
   height: 10vh;
 }
 
 .input-add{
   padding-top: 6px;
+}
+
+.input-add:focus{
+  outline: #000 0px;
+}
+
+.input-add:active{
+  background-color:  var(--addbuttonPressesBackgroundColor);
 }
