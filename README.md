@@ -11,12 +11,12 @@ A TodoList web app made with Mongo, Express , Node, EJS and lots of Love
 
 ### Make a custom list
 
-<img src="https://github.com/VpsOP/todo-list/blob/master/assets/images/todolist-customname.png?raw=true" width="100" height="100">
+<img src="https://github.com/VpsOP/todo-list/blob/master/assets/images/todolist-customname.png?raw=true">
 
 
 If you entered Shopping in place of {listName}, it will make a list named Shopping like this  
 
-<img src="https://github.com/VpsOP/todo-list/blob/master/assets/images/todolist-shopping.png?raw=true" width="100" height="100">
+<img src="https://github.com/VpsOP/todo-list/blob/master/assets/images/todolist-shopping.png?raw=true" width="400">
 
 ## Database
 
