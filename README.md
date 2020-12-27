@@ -25,7 +25,7 @@ The app uses mongoose to manage MongoDB database.
 
 There are two Models - Item and List
 * ```Item model``` for saving all the items of default list.
-* ```List model``` stores all the custom lists. There is a separate document for each custom list and all the items are stored in an array named ```items```.
+* ```List model``` stores all the custom lists. There is a separate document for each custom list and all the tasks of each custom list are stored in an array named ```items``` in the Document for that list.
 
  
 ## License
