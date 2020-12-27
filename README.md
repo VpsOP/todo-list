@@ -7,7 +7,7 @@ A TodoList web app made with Mongo, Express , Node, EJS and lots of Love
 ## How it looks
 
 ### Default List
-<img src="https://github.com/VpsOP/todo-list/blob/master/assets/images/todolist-default.png?raw=true" width="100" height="100">
+<img src="https://github.com/VpsOP/todo-list/blob/master/assets/images/todolist-default.png?raw=true" width="400" height="400">
 
 ### Make a custom list
 
